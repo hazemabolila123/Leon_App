@@ -1,0 +1,47 @@
+- Lesson1
+    Normalize File at CSS directory is used to provide a consistent, cross- browser platfrom for styling HTML across different browsers.
+
+- Lesson2
+    Why we use containers ?
+    1- because if we gave styles to the parent div (width: 600px), 
+    it will applied to the parent div so we will have a parent div in center with width = 600px and the 100% = 600px will be in another color which makes a bad user experience, so we add a conatiner in the parent to centeralize its contents without changing the parent div.   
+    2- We will have a design pattern for all our elementes
+
+    How we use the container ?
+    - by adding a container inside the the parent div and giving it
+    (1) margin from left and right to centeralize it in the in the large screens
+    (2) padding from left and right to hava a spce from the screen in small screens such as mobile 
+    (3) and specify its width in @media to achieve responsive design requirments and prevent the container from scrolled.
+
+    code :
+    .parent {
+    background-color: #eee;
+    }
+
+    .container {
+        margin: 0px auto;
+        background-color: #ccc;
+        padding: 0px 15px;
+    }
+
+    /* Small Screens */
+    @media (min-width: 768px) {
+        .container {
+            width: 750px;
+        }
+    }
+
+    /* Medium Screens */
+    @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+    }
+
+    /* Large Screens */
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    } 
+
