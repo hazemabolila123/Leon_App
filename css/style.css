@@ -5,7 +5,7 @@
 }
 
 :root {
-    --main-color: #10cab7;
+    --main-color: #4a8cbe;
 }
 
 body {
@@ -146,3 +146,40 @@ body {
 }
 
 /* End Landing-Space */
+
+/* Start Features Section   */
+.features {
+    padding: 60px 0;
+    background-color: #f4f1f1;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+}
+
+.features .container .feat {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.features .container .feat i {
+    font-size: 40px;
+    color: var(--main-color);
+}
+
+
+.features .container .feat h3 {
+    font-weight: 800;
+    font-size: 22px;
+    margin: 30px 0;
+}
+
+.features .container .feat p {
+    color: #777;
+}
+
+/* End Features Section   */
