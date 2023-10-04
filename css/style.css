@@ -4,17 +4,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-color: #10cab7;
+}
+
 body {
     font-family: 'Work Sans', sans-serif;
 }
 
-.parent {
-    background-color: #eee;
-}
-
 .container {
     margin: 0px auto;
-    background-color: #ccc;
     padding: 0px 15px;
 }
 
@@ -38,3 +37,112 @@ body {
         width: 1170px;
     }
 }
+
+/* Start Header */
+.header {
+    padding: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    width: 60px;
+}
+
+.header .links {
+    position: relative;
+}
+
+.header .links .icon:hover span:nth-child(2) {
+    width: 100%;
+}
+
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header .links .icon span {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 5px;
+}
+
+.header .links .icon span:nth-child(2) {
+    width: 50%;
+    transition-duration: .3s;
+}
+
+.header .container .links:hover ul {
+    display: block;
+}
+
+.header .container .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #f4f1f1;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    min-width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: none;
+    z-index: 1;
+}
+
+.header .container .links ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    color: #333;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.header .container .links ul li a:hover {
+    padding-left: 25px;
+}
+
+.header .container .links ul li {
+    border-bottom: 1px solid #ccc;
+}
+
+/* End Header */
+
+/* Start Landing-Space */
+.landing-space {
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+
+.landing-space .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 320px;
+}
+
+.landing-space .intro-text h3 {
+    font-size: 30px;
+    margin: 0;
+    color: var(--main-color);
+}
+
+.landing-space .landing-space p {
+    font-size: 18px;
+}
+
+/* End Landing-Space */

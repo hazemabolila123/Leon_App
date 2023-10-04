@@ -4,7 +4,7 @@
 - Lesson2
     Why we use containers ?
     1- because if we gave styles to the parent div (width: 600px), 
-    it will applied to the parent div so we will have a parent div in center with width = 600px and the 100% = 600px will be in another color which makes a bad user experience, so we add a conatiner in the parent to centeralize its contents without changing the parent div.   
+    it will applied to the parent div so we will have a parent div in center with width = 600px and the 100% - 600px will be in another color which makes a bad user experience, so we add a conatiner in the parent to centeralize its contents without changing the parent div.   
     2- We will have a design pattern for all our elementes
 
     How we use the container ?
