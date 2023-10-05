@@ -11,7 +11,7 @@ body {
 
 :root {
     --main-color: #10cab7;
-    --tem-color: #4a8cbe;
+    --tem-color: #325976;
 }
 
 /* End normalizing our page */
@@ -365,3 +365,83 @@ body {
 }
 
 /* End protfolio section styling */
+
+/* Start about section styling */
+
+.about {
+    padding: 60px 0;
+}
+
+.about .about-content {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .about-content .img {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.about .about-content .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.about .about-content .img::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--tem-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -45%);
+    z-index: -1;
+}
+
+
+.about .about-content .info {
+    width: 600px;
+}
+
+.about .about-content .info p:first-child {
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.about .about-content .info hr {
+    display: inline-block;
+    width: 50%;
+    border-color: var(--main-color);
+}
+
+.about .about-content .info p:last-child {
+    color: #777;
+    margin-top: 40px;
+}
+
+@media (max-width: 1199px) {
+
+    .about .about-content {
+        margin-top: 70px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .about-content .img {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        margin-bottom: 40px;
+        left: 10px;
+    }
+
+    .about .about-content .info {
+        width: 300px;
+    }
+}
+
+/* End about section styling */
