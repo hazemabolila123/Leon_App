@@ -12,6 +12,9 @@ body {
 :root {
     --main-color: #10cab7;
     --tem-color: #325976;
+    --paragraph-color: #777;
+    --body-color: #f4f1f1;
+    --main-duration: .3s;
 }
 
 /* End normalizing our page */
@@ -117,14 +120,14 @@ body {
 
 .header .container .links .icon span:nth-last-child(2) {
     width: 50%;
-    transition-duration: .3s;
+    transition-duration: var(--main-duration);
 }
 
 .header .container .links ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #f4f1f1;
+    background-color: var(--body-color);
     min-width: 200px;
     position: absolute;
     right: 0;
@@ -191,7 +194,7 @@ body {
 /* Start of features section styling */
 
 .features {
-    background-color: #f4f1f1;
+    background-color: var(--body-color);
     padding: 60px 0;
 }
 
@@ -220,7 +223,7 @@ body {
 }
 
 .features .container .feat p {
-    color: #777;
+    color: var(--paragraph-color);
     line-height: 1.4;
 }
 
@@ -285,7 +288,7 @@ body {
 
 .services .services-content .col .text p {
     line-height: 1.4;
-    color: #777;
+    color: var(--paragraph-color);
     font-weight: 300;
 }
 
@@ -324,7 +327,7 @@ body {
 
 /* Start protfolio section styling */
 .protfolio {
-    background-color: #f4f1f1;
+    background-color: var(--body-color);
     padding: 60px 0;
 }
 
@@ -360,7 +363,7 @@ body {
 }
 
 .protfolio .protofolio-content .card .text p {
-    color: #777;
+    color: var(--paragraph-color);
     line-height: 1.4;
 }
 
@@ -419,7 +422,7 @@ body {
 }
 
 .about .about-content .info p:last-child {
-    color: #777;
+    color: var(--paragraph-color);
     margin-top: 40px;
 }
 
@@ -445,3 +448,82 @@ body {
 }
 
 /* End about section styling */
+
+/* start contacts section styling */
+.contact {
+    background-color: var(--body-color);
+    padding: 60px 0px;
+}
+
+.contact .container .special-heading {
+    color: white;
+}
+
+.contact .contact-content {
+    margin-top: 100px;
+}
+
+.contact .contact-content>p {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--main-color);
+}
+
+.contact .contact-content>a {
+    display: block;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--tem-color);
+    font-weight: bold;
+    text-align: center;
+    margin-top: -18px;
+}
+
+.contact .contact-content .social {
+    width: 280px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .contact .contact-content {
+        margin-top: 60px;
+    }
+
+    .contact .contact-content>p {
+        font-size: 24px;
+    }
+
+    .contact .contact-content>a {
+        font-size: 24px;
+        margin-top: -14px;
+    }
+
+    .contact .contact-content .social {
+        width: 260px;
+    }
+}
+
+/* End contacts section styling */
+
+/* Start of footer design */
+.footer {
+    height: 80px;
+    background-color: var(--tem-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.footer span {
+    color: var(--main-color);
+    font-weight: bold;
+    padding: 0px 5px;
+}
+
+/* End of footer design */
