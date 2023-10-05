@@ -1,3 +1,4 @@
+/* Start normalizing our page */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -12,6 +13,39 @@ body {
     --main-color: #10cab7;
     --tem-color: #4a8cbe;
 }
+
+/* End normalizing our page */
+
+/* Start of global values */
+
+.special-heading {
+    margin: 0;
+    font-size: 100px;
+    color: #eee;
+    text-align: center;
+    font-weight: 800;
+}
+
+.special-heading+p {
+    color: gray;
+    text-align: center;
+    font-size: 20px;
+    margin: -35px 0 0 0;
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+
+    .special-heading+p {
+        font-size: 12px;
+        margin: -15px 0 0;
+    }
+}
+
+/* End of global values */
+
 
 /* Start of Container and its diffrent scales*/
 
@@ -191,3 +225,143 @@ body {
 }
 
 /* End of features section styling */
+
+/* Start services section styling */
+.services {
+    padding: 60px 0;
+}
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 120px;
+}
+
+.services .services-content .col .srv {
+    height: 220px;
+    /* border: 1px solid var(--tem-color); */
+    display: flex;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+
+    .services .services-content .col .srv {
+        flex-direction: column;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+
+    .services .services-content {
+        margin-top: 70px;
+        grid-gap: 0;
+    }
+
+    .services .services-content .col .srv i {
+        flex-basis: 0px;
+        margin-bottom: 10px;
+    }
+
+    .protfolio .protofolio-content {
+        margin-top: 70px;
+    }
+}
+
+.services .services-content .col .srv i {
+    flex-basis: 60px;
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+.services .services-content .col .text {
+    flex: 1;
+}
+
+.services .services-content .col .text h3 {
+    margin: 7px 0 26px 0;
+}
+
+.services .services-content .col .text p {
+    line-height: 1.4;
+    color: #777;
+    font-weight: 300;
+}
+
+.services .services-content .col .img {
+    position: relative;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.services .services-content .col .img img {
+    width: 300px;
+    height: 400px;
+}
+
+.services .services-content .col .img::before {
+    content: "";
+    width: 125px;
+    height: calc(100% + 100px);
+    background-color: var(--tem-color);
+    position: absolute;
+    right: -83px;
+    top: -12%;
+    z-index: -1;
+}
+
+@media (max-width: 1199px) {
+    .services .services-content .col .img {
+        display: none;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+}
+
+/* End services section styling */
+
+/* Start protfolio section styling */
+.protfolio {
+    background-color: #f4f1f1;
+    padding: 60px 0;
+}
+
+.protfolio .special-heading {
+    color: white;
+}
+
+
+
+.protfolio .protofolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin-top: 80px;
+}
+
+.protfolio .protofolio-content .card {
+    background-color: white;
+    border-radius: 3px;
+}
+
+.protfolio .protofolio-content .card img {
+    width: 100%;
+    background-color: white;
+}
+
+.protfolio .protofolio-content .card .text {
+    padding: 20px;
+}
+
+.protfolio .protofolio-content .card .text h3 {
+    margin: 0;
+}
+
+.protfolio .protofolio-content .card .text p {
+    color: #777;
+    line-height: 1.4;
+}
+
+/* End protfolio section styling */
